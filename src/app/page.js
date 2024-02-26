@@ -2,6 +2,7 @@
 import Image from "next/image";
 import proyect from "../../public/proyect.png"
 import telecom from "../../public/telecom.jpg"
+import profile from "../../public/profile.jpg"
 
 import { FaReact } from "react-icons/fa";
 import { IoCodeSlashOutline } from "react-icons/io5";
@@ -21,6 +22,9 @@ import { FaPython } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { SiReactquery } from "react-icons/si";
 import { FaWordpressSimple } from "react-icons/fa";
+import { IoHomeOutline } from "react-icons/io5";
+
+import Link from "next/link";
 
 export default function MainApp() {
 
@@ -29,15 +33,62 @@ export default function MainApp() {
 
       <section className="bg-[#1C1C1C] w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px]">
 
-        <article className="hidden rounded-md my-2 mx-1 bg-blue-300
+        <article className="hidden rounded-md my-2 mx-1 bg-[#212121]
                             md:flex md:col-span-4
                             xl:col-span-3">
-          perfil
+
+          <section className="relative h-[250px]  border-b-2 border-gray-500 w-[95%] mx-auto">
+            <div className="m-2">
+              <div className="relative">
+                <Image src={profile} className="w-24 h-24 rounded-full mb-2" />
+                <div className=" absolute bottom-2 left-[85px] rounded-full bg-lime-400 h-4 w-4 animate-pulse cursor-pointer">
+
+                </div>
+              </div>
+
+              <div className="absolute top-4 right-4 flex flex-row gap-x-2">
+
+                <Link href={""}>
+                  <IoHomeOutline className="bg-gray-500 text-4xl p-2 rounded-full border" />
+                </Link>
+
+                <Link href={""}>
+                  <FaGithub className="bg-gray-500 text-4xl p-2 rounded-full border" />
+                </Link>
+              </div>
+
+              <div className="mb-4">
+                <h1 className="text-2xl font-bold text-white mb-2">
+                  Nicolas Falabella
+                </h1>
+                <h5 className="-my-1 text-sm text-gray-300"> Frontend Developer </h5>
+                <h5 className="mt-1 text-gray-300 text-sm "> nicolasgfalabella@gmail.com </h5>
+              </div>
+
+              <section className="flex flex-row flex-wrap gap-x-1 -mt-1">
+                <article>
+                  <h6 className="text-[11px] cursor-pointer bg-gray-500 px-3 py-1 rounded-lg"> Whatsapp </h6>
+                </article>
+
+                <article>
+                  <h6 className="text-[11px] cursor-pointer bg-gray-500 px-3 py-1 rounded-lg"> Email </h6>
+                </article>
+
+                <article>
+                  <h6 className="text-[11px] cursor-pointer bg-gray-500 px-3 py-1 rounded-lg"> Instagram </h6>
+                </article>
+
+              </section>
+
+
+            </div>
+          </section>
+
         </article>
 
 
 
-        <article className="bg-[#1C1C1C] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
+        <article className="bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
                               md:col-span-8 
                               xl:col-span-6">
 
@@ -58,7 +109,7 @@ export default function MainApp() {
             </div>
           </div>
 
-          <section className="w-[90%] mx-auto mt-4 flex flex-col gap-y-6 py-4 bg-[#1C1C1C] h-[250px] overflow-hidden scrolling">
+          <section className="w-[90%] mx-auto mt-4 flex flex-col gap-y-6 py-4 h-[250px] overflow-hidden scrolling">
 
             <div className="flex flex-row gap-x-2 items-center cursor-pointer
                             sm:gap-x-4">
