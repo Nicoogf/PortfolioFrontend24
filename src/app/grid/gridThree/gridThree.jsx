@@ -8,6 +8,10 @@ import freecodeCamp from "../../../../public/freecode.jpg"
 import Link from 'next/link'
 import Image from 'next/image'
 
+import Technologies from '@/app/components/technologies/tecnologias.js' ;
+import TechnologiesComponent from "@/app/components/technologies/technologies"
+import TechnologiesLite from '@/app/components/technologies/TechnologiesLite'
+
 const GridThree = () => {
   return (
     <article className="hidden rounded-md my-2 mx-1 bg-[#212121] overflow-hidden
@@ -77,92 +81,11 @@ const GridThree = () => {
           <div className="mt-4 pb-8 w-[90%] mx-auto scrolling">
             <h3 className="mt-3 text-gray-200 font-semibold mb-4 text-center"> Skills -Tech Stack </h3>
 
-            <div className="flex flex-wrap items-center justify-center w-[90%] mx-auto gap-2">       
+            <div className="flex flex-wrap items-center justify-center w-[90%] mx-auto gap-2">  
 
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaReact className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">React Js</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <TbBrandNextjs className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Next Js</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <TbBrandVite className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Vite</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaNode className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Node Js</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiTypescript className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Typescript</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <IoLogoJavascript className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Javascript</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiMysql className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">MySQL</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiMongodb className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">MongoDD</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaHtml5 className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">HTML</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaCss3Alt className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">CSS</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiRedux className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Redux</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiExpress className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Express</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaGithub className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Git</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaPython className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Python</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiTailwindcss className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Tailwind</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <SiReactquery className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">React Query</h6>
-              </div>
-
-              <div className="flex flex-row items-center gap-x-1 border border-[#404040] py-1 px-3 rounded-lg cursor-pointer">
-                <FaWordpressSimple className="text-gray-400" />
-                <h6 className="text-gray-400 text-xs">Wordpress</h6>
-              </div>
+            {Technologies.map( (tecnologia , index ) => (
+                  <TechnologiesLite key={index}  name={tecnologia.name} icon={tecnologia.icon}/>
+              ))}     
 
             </div>
           </div>
