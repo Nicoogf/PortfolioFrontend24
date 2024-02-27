@@ -19,7 +19,13 @@ const GridOne = () => {
           <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
             <div className="m-2">
               <div className="relative">
-                <Image src={profile} className="w-24 h-24 rounded-full mb-2" alt={""}/>
+
+                <Image crossOrigin="anonymous" 
+                       src={profile} 
+                       className="w-24 h-24 rounded-full mb-2" 
+                       alt={""}
+                />
+
                 <div className=" absolute bottom-2 left-[85px] rounded-full bg-lime-400 h-4 w-4 animate-pulse cursor-pointer">
 
                 </div>
@@ -27,13 +33,14 @@ const GridOne = () => {
 
               <div className="absolute top-4 right-4 flex flex-row gap-x-2">
 
-                <Link href={""}>
-                  <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" />
+                <Link href={"#"} >
+                  <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" crossOrigin="anonymous"/>
                 </Link>
 
-                <Link href={""}>
-                  <FaGithub className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" />
+                <Link href={"#"} crossOrigin="anonymous">
+                  <FaGithub className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" crossOrigin="anonymous" />
                 </Link>
+
               </div>
 
               <div className="mb-4">
@@ -73,12 +80,12 @@ const GridOne = () => {
             <div>
 
             <div className="text-xs font-semibold flex flex-row gap-x-2 mb-2">
-                <TfiMedallAlt />
+                <TfiMedallAlt crossOrigin="anonymous"/>
                 <h6> 2 Años como desarollador</h6>  
             </div>
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
-               <IoIosGitMerge />
+               <IoIosGitMerge crossOrigin="anonymous"/>
                 <h6> 17  Proyectos </h6>
               </div>
             </div>

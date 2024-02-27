@@ -6,8 +6,14 @@ const Proyect = ( props ) => {
     <div className="flex flex-row gap-x-2 items-center cursor-pointer
                               sm:gap-x-4">
 
-                <Image crossOrigin="anonymous" width={100} height={100} alt ={props.proyect} src={props.img} className="aspect-square object-cover w-20 h-20 rounded-full
-                                                sm:w-24 sm:h-24" />
+                <Image crossOrigin="anonymous" 
+                       width={100} 
+                       height={100} 
+                       alt={props.proyect} 
+                       src={props.img} 
+                       className="aspect-square object-cover w-20 h-20 rounded-full
+                                  sm:w-24 sm:h-24"
+                />
 
                 <div>
                   <h4 className="text-[10px] text-gray-400
