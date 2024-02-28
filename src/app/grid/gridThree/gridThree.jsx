@@ -6,6 +6,8 @@ import TechnologiesLite from '@/app/components/technologies/TechnologiesLite'
 import Estudios from "@/app/components/studies/estudios.js"
 import Studies from "@/app/components/studies/Studies"
 
+
+
 const GridThree = () => {
   return (
     <article className="hidden rounded-md my-2 mx-1 bg-[#212121] overflow-hidden
@@ -14,14 +16,14 @@ const GridThree = () => {
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
             <h3 className="text-lg font-bold mb-2 text-gray-200 text-center"> Curriculum </h3>
             <p className="text-gray-400 text-xs mb-4 text-center"> A continuacion dejare el boton de descarga para obtener el curriculum actualizado en formato PDF</p>
-            <Link href={""} className="" > 
+            <a href="/Nicolas_Falabella.pdf" download>
                
-                <div className="flex flex-row items-center justify-center bg-[#404040] rounded-lg w-[50%] mx-auto gap-x-2">
-                <IoDownloadOutline className="text-gray-300" crossOrigin="anonymous"/>
-                <h6 className=" text-gray-300 py-2 text-xs font-semibold"> Download </h6> 
+                <div className="flex flex-row items-center justify-center  bg-transparent border border-gray-400 text-gray-400 rounded-lg w-[50%] mx-auto gap-x-2 hover:scale-105 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 transition-all duration-200">
+                <IoDownloadOutline />
+                <h6 className=" py-2 text-xs font-semibold"> Download </h6> 
                 </div>
              
-            </Link>
+            </a>
           </div>
 
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
@@ -37,7 +39,7 @@ const GridThree = () => {
 
           </div>
 
-          <div className="mt-4 pb-8 w-[90%] mx-auto scrolling">
+          <div className="segundaVentana mt-4 pb-8 w-[90%] mx-auto scrolling">
             <h3 className="mt-3 text-gray-200 font-semibold mb-4 text-center"> Skills -Tech Stack </h3>
 
             <div className="flex flex-wrap items-center justify-center w-[90%] mx-auto gap-2">  

@@ -2,7 +2,7 @@ const proyectos = [
     {   
         id: 1 ,
         date :  "May 2024" ,
-        proyect : "Digital Money App" ,
+        proyect : "wordpress" ,
         desc: "Proyecto final de cursada que consite en realizar el diseño y funcionamiento basico de una billetera digital" ,
         img : "/proyect.png",
         category : "wordpress"
@@ -10,14 +10,14 @@ const proyectos = [
     {   
         id: 2 ,
         date :  "May 2024" ,
-        proyect : "Digital Money App" ,
+        proyect : "frontend" ,
         desc: "Proyecto final de cursada que consite en realizar el diseño y funcionamiento basico de una billetera digital" ,
         img : "/proyect.png",
-        category : "app"
+        category : "frontend"
     }  ,
     {   
         id: 3 ,
-        date :  "May 2024" ,
+        date :  "May 2023" ,
         proyect : "Digital Money App" ,
         desc: "Proyecto final de cursada que consite en realizar el diseño y funcionamiento basico de una billetera digital" ,
         img : "/proyect.png",
@@ -26,11 +26,11 @@ const proyectos = [
     {   
         id: 4 ,
         date :  "May 2024" ,
-        proyect : "Digital Money App" ,
+        proyect : "frontend" ,
         desc: "Proyecto final de cursada que consite en realizar el diseño y funcionamiento basico de una billetera digital" ,
         img : "/proyect.png",
-        category : "app"
-    }   
+        category : "frontend"
+    }
 ] 
 
 export default proyectos ;

@@ -1,18 +1,28 @@
-import React from 'react' ;
+import React, { useState } from 'react' ;
 import { IoCodeSlashOutline } from 'react-icons/io5'
-
-import proyectos from '../../components/proyect/proyectos.js';
-import ProyectComponent from '@/app/components/proyect/Proyect';
 import Technologies from '@/app/components/technologies/tecnologias.js' ;
 import TechnologiesComponent from "@/app/components/technologies/technologies"
 import Experience from '@/app/components/experience/experiencia';
 import ExperienceComponent from '@/app/components/experience/Experience';
+import proyectos from '@/app/components/proyect/proyectos';  
+import ProyectComponent from "../../../app/components/proyect/Proyect"
 
-const GridTwo = () => {
+const GridTwo = (  ) => {
 
- 
+  const [selectedCategory, setSelectedCategory] = useState('Todos los proyectos');
+  const [filteredProjects, setFilteredProjects] = useState(proyectos);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    const filteredProjects = category === 'Todos los proyectos' ? proyectos 
+                                          : proyectos.filter(project => project.category === category);
+    setFilteredProjects(filteredProjects);
+  };
+  
+
+
   return (
-    <article className="bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
+    <article className="segundaVentana bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
                               md:col-span-8 
                               xl:col-span-6">
 
@@ -34,16 +44,44 @@ const GridTwo = () => {
           </div>
 
           <div className="text-sm text-gray-200 flex flex-row justify-around my-6 w-[90%] mx-auto">
-            <h3 className="font-semibold cursor-pointer">Wordpress Jobs</h3>
-            <h3 className="font-semibold cursor-pointer">Clones UX / UI </h3>
-            <h3 className="font-semibold cursor-pointer">Projects Frontend </h3>
-            </div>
 
-          <section className="relative w-[90%] mx-auto mt-4 flex flex-col gap-y-6 py-4 h-[250px]  xl:h-[350px] overflow-hidden scrolling">
-            
-           { proyectos.map( (proyecto) => (
+            <h3 className="font-semibold cursor-pointer" 
+            onClick={() => handleCategoryClick('Todos los proyectos')} >
+            All
+            </h3>
+
+            <h3 className="font-semibold cursor-pointer" 
+            onClick={() => handleCategoryClick('wordpress')}>
+            Wordpress Jobs
+            </h3>
+
+            <h3 className="font-semibold cursor-pointer"
+            onClick={() => handleCategoryClick('frontend')}>
+            Projects Frontend
+            </h3>   
+
+            <h3 className="font-semibold cursor-pointer"
+             onClick={() => handleCategoryClick('ux')}>
+              Clones UX / UI 
+            </h3>
+
+          </div>
+
+          <section className="proyectos relative w-[90%] mx-auto mt-4 flex flex-col gap-y-6 py-4 h-[250px]  xl:h-[350px] overflow-hidden scrolling">      
+          
+          
+          {filteredProjects.map(proyecto => (
+            <ProyectComponent 
+                key={proyecto.id} 
+                date={proyecto.date} 
+                proyect={proyecto.proyect} 
+                desc={proyecto.desc} 
+                img={proyecto.img}/>
+          ))}
+
+           { /* proyectos.map( (proyecto) => (
                 <ProyectComponent key={proyecto.id} date={proyecto.date} proyect={proyecto.proyect} desc={proyecto.desc} img={proyecto.img}/>
-           ))}
+           )) */}
 
           </section>
 

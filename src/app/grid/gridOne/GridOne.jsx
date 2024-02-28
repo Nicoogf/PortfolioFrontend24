@@ -31,14 +31,14 @@ const GridOne = () => {
                 </div>
               </div>
 
-              <div className="absolute top-4 right-4 flex flex-row gap-x-2">
+              <div className="absolute top-3 right-3 flex flex-row gap-x-2">
 
                 <Link href={"#"} >
-                  <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" crossOrigin="anonymous"/>
+                  <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
                 </Link>
 
-                <Link href={"#"} crossOrigin="anonymous">
-                  <FaGithub className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400" crossOrigin="anonymous" />
+                <Link href={"https://github.com/Nicoogf"} target="_blank" crossOrigin="anonymous">
+                  <FaGithub className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous" />
                 </Link>
 
               </div>
@@ -53,15 +53,20 @@ const GridOne = () => {
 
               <section className="flex flex-row flex-wrap gap-x-1 -mt-1">
                 <article>
-                  <h6 className="text-gray-200 text-[11px] cursor-pointer bg-[#404040] px-2 py-1 rounded-lg"> Whatsapp </h6>
+                <Link href={"https://api.whatsapp.com/send?phone=5492324584106"} target="_blank">
+                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Whatsapp </h6>
+                </Link>    
                 </article>
 
                 <article>
-                  <h6 className="text-gray-200 text-[11px] cursor-pointer bg-[#404040] px-2 py-1 rounded-lg"> Email </h6>
+                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-3 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Email </h6>
                 </article>
 
                 <article>
-                  <h6 className="text-gray-200 text-[11px] cursor-pointer bg-[#404040] px-2 py-1 rounded-lg"> Instagram </h6>
+                <Link href={"https://www.instagram.com/nfalabella_/"} 
+                target="_blank" >
+                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Instagram </h6>
+                  </Link>  
                 </article>
 
               </section>
@@ -98,7 +103,7 @@ const GridOne = () => {
               <input placeholder="Asunto"
                      className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
               <textarea  placeholder="Ingresar mensaje" className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
-              <button className="w-[30%] ml-auto block bg-[#404040] py-2 rounded-lg text-xs font-semibold"> Enviar </button>
+              <button className="w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"> Enviar </button>
             </form>
           </section>
 
