@@ -10,7 +10,7 @@ import Studies from "@/app/components/studies/Studies"
 
 const GridThree = () => {
   return (
-    <article className="hidden rounded-md my-2 mx-1 bg-[#212121] overflow-hidden
+    <article className="hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden
                             xl:flex xl:col-span-3 flex-col">
                               
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">

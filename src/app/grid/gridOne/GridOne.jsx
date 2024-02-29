@@ -14,7 +14,7 @@ const GridOne = () => {
 
     <article className="hidden rounded-md my-2 mx-1 bg-[#212121]
                             md:flex md:col-span-4 md:flex-col
-                            xl:col-span-3">
+                            xl:col-span-3 shadow-xl">
 
           <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
             <div className="m-2">

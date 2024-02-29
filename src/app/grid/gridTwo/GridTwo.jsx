@@ -22,7 +22,7 @@ const GridTwo = (  ) => {
 
 
   return (
-    <article className="segundaVentana bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
+    <article className="segundaVentana shadow-xl bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
                               md:col-span-8 
                               xl:col-span-6">
 
