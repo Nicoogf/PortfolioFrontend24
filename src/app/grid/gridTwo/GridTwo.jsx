@@ -6,6 +6,7 @@ import Experience from '@/app/components/experience/experiencia';
 import ExperienceComponent from '@/app/components/experience/Experience';
 import proyectos from '@/app/components/proyect/proyectos';  
 import ProyectComponent from "../../../app/components/proyect/Proyect"
+import MenuLateral from '../leftMenuMobile/menu';
 
 const GridTwo = (  ) => {
 
@@ -19,12 +20,24 @@ const GridTwo = (  ) => {
     setFilteredProjects(filteredProjects);
   };
   
+  const [menu , setMenu] = useState(false)
+
+  function toggleMenu () {
+    setMenu(!menu)
+  }
 
 
   return (
-    <article className="segundaVentana shadow-xl bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
+    <article className="segundaVentana  shadow-xl bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
                               md:col-span-8 
                               xl:col-span-6">
+
+          <button className='absolute top-2 right-2 border border-gray-500 text-white '
+                  onClick={toggleMenu}>           
+                   Menu
+          </button>       
+
+                      
 
           <div className="border-b-2 border-[#404040] pb-8 w-[90%] mx-auto">
             <div className="flex flex-row items-center gap-x-8 mt-4 w-[92%] mx-auto">
