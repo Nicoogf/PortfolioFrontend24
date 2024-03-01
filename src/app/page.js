@@ -8,11 +8,11 @@ import MenuLateral from "./grid/leftMenuMobile/menu";
 export default function MainApp() {
 
   return (
-    <main className="w-full h-screen bg-[#171717] max-w-full flex items-center">
+    <main className="relative w-full h-screen bg-[#171717] max-w-full flex items-center">
+
+          <MenuLateral />   
 
       <section className="relative bg-[#1C1C1C] w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px]">
-
-        <MenuLateral />   
 
         <GridOne />
 

@@ -9,7 +9,7 @@ import profile from "../../../../public/profile.jpg"
 
 const MenuLateral = () => {
   return (
-    <nav className='absolute w-[90%] h-full z-50 rounded-xl overflow-hidden md:hidden shadow-xl'>
+    <nav className='absolute top-0 bottom-0  w-[85%] z-50 rounded-xl overflow-hidden md:hidden shadow-xl border-r-4 border-gray-500 max-w-[400px]'>
              <article className="rounded-md my-2 mx-1 bg-[#212121] h-full 
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 ">
@@ -29,7 +29,7 @@ const MenuLateral = () => {
                 </div>
               </div>
 
-              <div className="absolute top-3 right-3 flex flex-row gap-x-2">
+              <div className="absolute top-3 right-3 flex flex-row gap-x-3">
 
                 <Link href={"#"} >
                   <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
