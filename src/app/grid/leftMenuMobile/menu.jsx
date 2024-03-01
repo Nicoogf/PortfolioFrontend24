@@ -42,7 +42,7 @@ const MenuLateral = () => {
               </div>
 
               <div className="mb-4">
-                <h1 className="text-2xl font-bold text-white mb-2">
+                <h1 className="text-2xl font-bold text-white mb-3">
                   Nicolas Falabella
                 </h1>
                 <h5 className="-my-1 text-sm text-gray-300"> Frontend Developer </h5>
