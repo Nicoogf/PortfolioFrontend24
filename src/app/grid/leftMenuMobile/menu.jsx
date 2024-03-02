@@ -29,7 +29,7 @@ const MenuLateral = () => {
                 </div>
               </div>
 
-              <div className="absolute top-3 right-3 flex flex-row gap-x-3">
+              <div className="absolute top-2 right-2 flex flex-row gap-x-3">
 
                 <Link href={"#"} >
                   <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
