@@ -83,13 +83,13 @@ const MenuLateral = () => {
             <div>
 
             <div className="text-xs font-semibold flex flex-row gap-x-2 mb-2">
-                <TfiMedallAlt crossOrigin="anonymous"/>
+                <TfiMedallAlt />
                 <h6> 2 Años como desarollador</h6>  
             </div>
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
-               <IoIosGitMerge crossOrigin="anonymous"/>
-                <h6> 17  Proyectos </h6>
+               <IoIosGitMerge />
+                <h6> 18  Proyectos </h6>
               </div>
             </div>
           </section>
