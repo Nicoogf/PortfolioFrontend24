@@ -89,7 +89,7 @@ const MenuLateral = () => {
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
                <IoIosGitMerge />
-                <h6> 18  Proyectos </h6>
+                <h6> 19 Proyectos </h6>
               </div>
             </div>
           </section>
