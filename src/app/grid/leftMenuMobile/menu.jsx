@@ -84,7 +84,7 @@ const MenuLateral = () => {
 
             <div className="text-xs font-semibold flex flex-row gap-x-2 mb-2">
                 <TfiMedallAlt />
-                <h6> 2 Años como desarollador</h6>  
+                <h6> 2 Años como desarollador web</h6>  
             </div>
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
