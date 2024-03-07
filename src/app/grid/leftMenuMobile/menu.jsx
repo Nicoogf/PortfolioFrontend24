@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
 import { IoHomeOutline } from 'react-icons/io5'
 import { TfiMedallAlt } from 'react-icons/tfi'
-import profile from "../../../../public/profile.jpg"
+import profile from "../../../../public/profile.jpg" ;
 
 const MenuLateral = () => {
   return (
@@ -49,7 +49,7 @@ const MenuLateral = () => {
                 <h5 className="mt-1 text-gray-300 text-sm "> nicolasgfalabella@gmail.com </h5>
               </div>
 
-              <section className="flex flex-row flex-wrap gap-x-1 -mt-1">
+              <section className="flex flex-row flex-wrap gap-x-1 -mt-1 z-40">
                 <article>
                 <Link href={"https://api.whatsapp.com/send?phone=5492324584106"} target="_blank">
                   <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Whatsapp </h6>
@@ -111,4 +111,4 @@ const MenuLateral = () => {
   )
 }
 
-export default MenuLateral
+export default MenuLateral ;
