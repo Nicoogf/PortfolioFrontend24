@@ -89,13 +89,13 @@ const MenuLateral = () => {
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
                <IoIosGitMerge />
-                <h6> 19 Proyectos </h6>
+                <h6> 14 Proyectos </h6>
               </div>
             </div>
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
-            <form className="flex gap-y-2 flex-col">
+            <form className="flex gap-y-2 flex-col flex-col">
               <input placeholder="Remitente" 
               className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
               <input placeholder="Asunto"
@@ -109,6 +109,6 @@ const MenuLateral = () => {
     
     </nav>
   )
-}
+} ;
 
 export default MenuLateral ;
