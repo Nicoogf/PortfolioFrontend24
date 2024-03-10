@@ -95,7 +95,7 @@ const MenuLateral = () => {
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
-            <form className="flex gap-y-2 flex-col flex-col">
+            <form className="flex gap-y-2 flex-col">
               <input placeholder="Remitente" 
               className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
               <input placeholder="Asunto"
