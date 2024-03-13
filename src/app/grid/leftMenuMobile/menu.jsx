@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 
 import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
-import { IoHomeOutline } from 'react-icons/io5'
+import { IoDownloadOutline, IoHomeOutline } from 'react-icons/io5'
 import { TfiMedallAlt } from 'react-icons/tfi'
 import profile from "../../../../public/profile.jpg" ;
 
@@ -34,12 +34,15 @@ const MenuLateral = ( props ) => {
 
   return (
     <nav className={`${props.menu === true ? "block" : "hidden"} ventana absolute left-0 bottom-0 top-0  w-[85%] z-50 rounded-xl  overflow-hidden md:hidden shadow-xl max-w-[400px]`}>
+       
         <article className="rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 ">
 
           <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
+            
             <div className="m-2">
+
               <div className="relative pt-2">
 
                 <Image crossOrigin="anonymous" 
@@ -93,8 +96,8 @@ const MenuLateral = ( props ) => {
 
               </section>
 
-
             </div>
+
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
@@ -116,6 +119,15 @@ const MenuLateral = ( props ) => {
                 <h6> 14 Proyectos </h6>
               </div>
             </div>
+
+            
+            <a href="/Nicolas_Falabella.pdf" download>               
+               <div className=" mt-8 flex flex-row items-center justify-center  bg-transparent border border-gray-400 text-gray-400 rounded-lg w-[40%] mx-auto gap-x-2 hover:scale-105 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 transition-all duration-200">
+               <IoDownloadOutline />
+               <h6 className=" py-2 text-xs font-semibold"> Download CV </h6> 
+               </div>            
+           </a>
+
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
@@ -133,7 +145,7 @@ const MenuLateral = ( props ) => {
           </form>
           </section>
 
-    </article>
+        </article>
     
     </nav>
   )

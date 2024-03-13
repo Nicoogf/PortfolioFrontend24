@@ -10,6 +10,7 @@ import ProyectComponent from "../../../app/components/proyect/Proyect"
 import MenuLateral from '../leftMenuMobile/menu';
 import Estudios from '@/app/components/studies/estudios.js' ;
 import StudiesMobile from '@/app/components/studiesMobile/Experience';
+import TechnologiesLite from '@/app/components/technologies/TechnologiesLite';
 
 const GridTwo = (  ) => {
 
@@ -29,11 +30,7 @@ const GridTwo = (  ) => {
   return (
     <article className="segundaVentana  shadow-xl bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
                               md:col-span-8 
-                              xl:col-span-6">
-
-          
-
-                      
+                              xl:col-span-6">           
 
           <div className="border-b-2 border-[#404040] pb-8 w-[90%] mx-auto">
             <div className="flex flex-row items-center gap-x-8 mt-4 w-[92%] mx-auto">
@@ -127,7 +124,6 @@ const GridTwo = (  ) => {
               ))}  
            
           </div>
-
 
     </article>
   )

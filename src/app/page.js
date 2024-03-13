@@ -24,10 +24,12 @@ export default function MainApp() {
                    <MdOutlineMenu  className='text-4xl p-1'/>
           </button>     
 
-       <MenuLateral menu={menu}/>   
+       
 
        <section className="relative bg-[#1C1C1C] w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px]">
 
+        <MenuLateral menu={menu}/>  
+        
         <GridOne />
 
         <GridTwo />
