@@ -1,5 +1,6 @@
 import React, { useState } from 'react' ;
 import { IoCodeSlashOutline } from 'react-icons/io5'
+import { MdOutlineMenu } from "react-icons/md";
 import Technologies from '@/app/components/technologies/tecnologias.js' ;
 import TechnologiesComponent from "@/app/components/technologies/technologies"
 import Experience from '@/app/components/experience/experiencia';
@@ -7,6 +8,8 @@ import ExperienceComponent from '@/app/components/experience/Experience';
 import proyectos from '@/app/components/proyect/proyectos';  
 import ProyectComponent from "../../../app/components/proyect/Proyect"
 import MenuLateral from '../leftMenuMobile/menu';
+import Estudios from '@/app/components/studies/estudios.js' ;
+import StudiesMobile from '@/app/components/studiesMobile/Experience';
 
 const GridTwo = (  ) => {
 
@@ -20,11 +23,7 @@ const GridTwo = (  ) => {
     setFilteredProjects(filteredProjects);
   };
   
-  const [menu , setMenu] = useState(false)
 
-  function toggleMenu () {
-    setMenu(!menu)
-  }
 
 
   return (
@@ -32,10 +31,7 @@ const GridTwo = (  ) => {
                               md:col-span-8 
                               xl:col-span-6">
 
-          <button className='absolute top-2 right-2 border border-gray-500 text-white '
-                  onClick={toggleMenu}>           
-                   Menu
-          </button>       
+          
 
                       
 
@@ -56,7 +52,7 @@ const GridTwo = (  ) => {
             </div>
           </div>
 
-          <div className="text-[12px] text-gray-200 flex flex-row justify-around my-6 w-[90%] mx-auto gap-x-2">
+          <div className="text-[12px] text-gray-200 flex flex-row flex-wrap  md:flex-nowrap justify-around my-6 w-[90%] mx-auto gap-1">
 
             <h3 className="font-semibold cursor-pointer bg-[#1C1C1C] shadow-lg hover:bg-gray-300 hover:text-gray-800 w-[121px] text-center py-2 px-2 flex items-center justify-center rounded-lg transition-colors duration-200" 
             onClick={() => handleCategoryClick('Todos los proyectos')} >
@@ -118,6 +114,16 @@ const GridTwo = (  ) => {
 
               {Experience.map( (experiencia , index ) => (
                   <ExperienceComponent key={index}  name={experiencia.name} img={experiencia.img} rol={experiencia.rol} date={experiencia.date}/>
+              ))}  
+           
+          </div>
+
+          <div className="border-t-2 mt-4 border-[#404040] pb-8 w-[90%] mx-auto flex flex-col gap-y-4 md:hidden">
+            
+            <h3 className="mt-3 text-gray-200 font-semibold mb-4 text-center"> Official certifications </h3>
+
+              {Estudios.map((estudios , index ) => (
+                  <StudiesMobile key={index}  name={estudios.sede} img={estudios.img} title={estudios.title} />
               ))}  
            
           </div>

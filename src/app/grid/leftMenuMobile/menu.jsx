@@ -1,22 +1,46 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
 import { IoHomeOutline } from 'react-icons/io5'
 import { TfiMedallAlt } from 'react-icons/tfi'
 import profile from "../../../../public/profile.jpg" ;
 
-const MenuLateral = () => {
+const MenuLateral = ( props ) => {
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_grml24d', 'template_lg3g9qs', form.current, {
+        publicKey: 'BjjMTn9xEt7p26HyT',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
+    e.target.reset()
+  };
+
   return (
-    <nav className='absolute top-0 bottom-0  w-[85%] z-50 rounded-xl overflow-hidden md:hidden shadow-xl border-r-4 border-gray-500 max-w-[400px] hidden'>
-             <article className="rounded-md my-2 mx-1 bg-[#212121] h-full 
+    <nav className={`${props.menu === true ? "block" : "hidden"} ventana absolute left-0 bottom-0 top-0  w-[85%] z-50 rounded-xl  overflow-hidden md:hidden shadow-xl max-w-[400px]`}>
+        <article className="rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 ">
 
           <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
             <div className="m-2">
-              <div className="relative">
+              <div className="relative pt-2">
 
                 <Image crossOrigin="anonymous" 
                        src={profile} 
@@ -95,14 +119,18 @@ const MenuLateral = () => {
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
-            <form className="flex gap-y-2 flex-col">
-              <input placeholder="Remitente" 
-              className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
-              <input placeholder="Asunto"
-                     className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
-              <textarea  placeholder="Ingresar mensaje" className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
-              <button className="w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"> Enviar </button>
-            </form>
+          <form className="flex gap-y-2 flex-col" ref={form} onSubmit={sendEmail}>
+
+          <input placeholder="Remitente" name='name' 
+          className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
+
+          <input placeholder="Asunto" name="asunto"
+                className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
+
+          <textarea  placeholder="Ingresar mensaje" name="message"
+          className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
+          <button className="w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"> Enviar </button>
+          </form>
           </section>
 
     </article>
