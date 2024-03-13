@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
@@ -10,6 +12,29 @@ import { TfiMedallAlt } from 'react-icons/tfi'
 import profile from "../../../../public/profile.jpg"
 
 const GridOne = () => {
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_grml24d', 'template_lg3g9qs', form.current, {
+        publicKey: 'BjjMTn9xEt7p26HyT',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
+    e.target.reset()
+  };
+
+
+  
   return (
 
     <article className="hidden rounded-md my-2 mx-1 bg-[#212121]
@@ -97,12 +122,16 @@ const GridOne = () => {
           </section>
 
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
-            <form className="flex gap-y-2 flex-col">
-              <input placeholder="Remitente" 
+            <form className="flex gap-y-2 flex-col" ref={form} onSubmit={sendEmail}>
+
+              <input placeholder="Remitente" name='name' 
               className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
-              <input placeholder="Asunto"
+
+              <input placeholder="Asunto" name="asunto"
                      className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
-              <textarea  placeholder="Ingresar mensaje" className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
+
+              <textarea  placeholder="Ingresar mensaje" name="message"
+              className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
               <button className="w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"> Enviar </button>
             </form>
           </section>

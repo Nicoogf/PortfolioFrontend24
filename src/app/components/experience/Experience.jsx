@@ -7,7 +7,7 @@ const Experience = ( props ) => {
       
     <Image crossOrigin="anonymous" 
            src={props.img} 
-           className="w-20 h-20 rounded-full border-4 border-gray-700" 
+           className="w-16 h-16 rounded-full border-4 border-gray-700" 
            alt={props.name} 
            width={100} 
            height={100} 

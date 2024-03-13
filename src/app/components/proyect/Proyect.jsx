@@ -4,15 +4,15 @@ import React from 'react' ;
 const Proyect = ( props ) => {
   return (
     <div className="flex flex-row gap-x-2 items-center cursor-pointer hover:py-4 transition-all duration-500
-                              sm:gap-x-4 hover:bg-gray-600/20 rounde-xl">
+                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories">
 
                 <Image crossOrigin="anonymous" 
                        width={100} 
                        height={100} 
                        alt={props.proyect} 
                        src={props.img} 
-                       className="aspect-square object-cover w-20 h-20 rounded-full ml-2
-                                  sm:w-24 sm:h-24"
+                       className="aspect-square object-cover w-16 h-16 rounded-full ml-2
+                                  sm:w-20 sm:h-20"
                 />
 
                 <div>
