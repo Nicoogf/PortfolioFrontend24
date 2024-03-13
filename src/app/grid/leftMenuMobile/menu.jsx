@@ -9,7 +9,7 @@ import profile from "../../../../public/profile.jpg" ;
 
 const MenuLateral = () => {
   return (
-    <nav className='absolute top-0 bottom-0  w-[85%] z-50 rounded-xl overflow-hidden md:hidden shadow-xl border-r-4 border-gray-500 max-w-[400px]'>
+    <nav className='absolute top-0 bottom-0  w-[85%] z-50 rounded-xl overflow-hidden md:hidden shadow-xl border-r-4 border-gray-500 max-w-[400px] hidden'>
              <article className="rounded-md my-2 mx-1 bg-[#212121] h-full 
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 ">

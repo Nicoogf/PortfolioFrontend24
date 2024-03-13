@@ -56,24 +56,24 @@ const GridTwo = (  ) => {
             </div>
           </div>
 
-          <div className="text-sm text-gray-200 flex flex-row justify-around my-6 w-[90%] mx-auto">
+          <div className="text-[12px] text-gray-200 flex flex-row justify-around my-6 w-[90%] mx-auto gap-x-2">
 
-            <h3 className="font-semibold cursor-pointer" 
+            <h3 className="font-semibold cursor-pointer bg-[#1C1C1C] shadow-lg hover:bg-gray-300 hover:text-gray-800 w-[121px] text-center py-2 px-2 flex items-center justify-center rounded-lg transition-colors duration-200" 
             onClick={() => handleCategoryClick('Todos los proyectos')} >
             All
             </h3>
 
-            <h3 className="font-semibold cursor-pointer" 
+            <h3 className="font-semibold cursor-pointer bg-[#1C1C1C] shadow-lg hover:bg-gray-300 hover:text-gray-800 w-[121px] text-center py-2 px-2 flex items-center justify-center rounded-lg transition-colors duration-200" 
             onClick={() => handleCategoryClick('wordpress')}>
             Wordpress Jobs
             </h3>
 
-            <h3 className="font-semibold cursor-pointer"
+            <h3 className="font-semibold cursor-pointer bg-[#1C1C1C] shadow-lg hover:bg-gray-300 hover:text-gray-800 w-[121px] text-center py-2 px-2 flex items-center justify-center rounded-lg transition-colors duration-200"
             onClick={() => handleCategoryClick('frontend')}>
             Projects Frontend
             </h3>   
 
-            <h3 className="font-semibold cursor-pointer"
+            <h3 className="font-semibold cursor-pointer bg-[#1C1C1C] shadow-lg hover:bg-gray-300 hover:text-gray-800 w-[121px] text-center py-2 px-2 flex items-center justify-center rounded-lg transition-colors duration-200"
              onClick={() => handleCategoryClick('ux')}>
               Clones UX / UI 
             </h3>
