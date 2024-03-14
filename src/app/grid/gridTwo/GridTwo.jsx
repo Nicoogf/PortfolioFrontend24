@@ -39,8 +39,8 @@ const GridTwo = (  ) => {
               <div>
                 <h2 className="font-semibold text-gray-100 text-2xl"> Proyectos </h2>
                 <h3 className="font-semibold text-gray-200 text-xl -mt-1 mb-2"> Frontend </h3>
-                <h5 className="text-sm font-semibold text-gray-300"> Blog </h5>
-                <h6 className="text-xs text-gray-400"> I design and code beautifully simple thins,and occasionally i write about themn</h6>
+                <h5 className="text-sm font-semibold text-gray-300"> En este listado encontraras </h5>
+                <h6 className="text-xs text-gray-400"> Algunos de los proyectos realizados hasta el momento clasificados segun la tecnologia utilizada o segundo su tipo de diseño</h6>
               </div>
 
             </div>

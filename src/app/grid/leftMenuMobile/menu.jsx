@@ -86,7 +86,10 @@ const MenuLateral = ( props ) => {
                 </article>
 
                 <article>
-                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-3 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Email </h6>
+                <Link href={"mailto:nicolasgfalabella@correo.com"} 
+                target="_blank" >
+                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Email </h6>
+                  </Link>  
                 </article>
 
                 <article>

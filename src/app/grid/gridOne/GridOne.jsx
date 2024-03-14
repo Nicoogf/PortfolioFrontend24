@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion"
 
 import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
@@ -38,7 +39,7 @@ const GridOne = () => {
   
   return (
 
-    <article className="hidden rounded-md my-2 mr-1 bg-[#212121]
+    <motion.article className="hidden rounded-md my-2 mr-1 bg-[#212121]
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 shadow-xl">
 
@@ -85,7 +86,10 @@ const GridOne = () => {
                 </article>
 
                 <article>
-                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-3 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Email </h6>
+                <Link href={"mailto:nicolasgfalabella@correo.com"} 
+                target="_blank" >
+                  <h6 className="text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-105"> Email </h6>
+                  </Link>  
                 </article>
 
                 <article>
@@ -137,7 +141,7 @@ const GridOne = () => {
             </form>
           </section>
 
-    </article>
+    </motion.article>
     
   )
 }
