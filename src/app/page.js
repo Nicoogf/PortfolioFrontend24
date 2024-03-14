@@ -6,6 +6,7 @@ import GridThree from "./grid/gridThree/gridThree";
 import MenuLateral from "./grid/leftMenuMobile/menu";
 import { MdOutlineMenu } from "react-icons/md";
 import { useState } from "react";
+import { Background } from "./components/background/Background";
 
 export default function MainApp() {
 
@@ -17,16 +18,19 @@ export default function MainApp() {
   }
 
   return (
-    <main className="relative w-full h-screen bg-[#171717] max-w-full flex items-center overflow-hidden scrolling">
+    <>
+    { /* <Background />  */ } 
+    <main className="relative w-full h-screen bg-[#141414] max-w-full flex items-center overflow-hidden scrolling">       
 
-          <button className='z-50 absolute top-4 right-4 border border-lime-400 text-gray-800 bg-lime-500 cursor-pointer rounded-lg md:hidden '
+       <section className="relative bg-transparent w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px] z-50">
+
+          <button className='z-50 absolute top-4 right-4 border-2 border-lime-400 text-lime-400 bg-transparent cursor-pointer rounded-xl md:hidden'
                   onClick={toggleMenu}>           
-                   <MdOutlineMenu  className='text-4xl p-1'/>
+                   <MdOutlineMenu  className='text-4xl p-2'/>
           </button>     
 
-       
 
-       <section className="relative bg-[#1C1C1C] w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px]">
+        
 
         <MenuLateral menu={menu}/>  
         
@@ -40,6 +44,7 @@ export default function MainApp() {
 
       </section>
 
-    </main>
+    </main>  
+   </>
   );
 }

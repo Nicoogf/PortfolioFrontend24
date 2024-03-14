@@ -3,8 +3,8 @@ import React from 'react' ;
 
 const Proyect = ( props ) => {
   return (
-    <div className="flex flex-row gap-x-2 items-center cursor-pointer hover:py-4 transition-all duration-500
-                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories">
+    <a className="flex flex-row gap-x-2 items-center cursor-pointer hover:py-4 transition-all duration-500
+                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories" href='#'>
 
                 <Image crossOrigin="anonymous" 
                        width={100} 
@@ -32,7 +32,7 @@ const Proyect = ( props ) => {
                   </h6>
 
                 </div>
-              </div>
+              </a>
   )
 }
 

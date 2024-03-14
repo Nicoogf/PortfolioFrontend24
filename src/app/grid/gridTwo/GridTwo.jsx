@@ -1,16 +1,13 @@
 import React, { useState } from 'react' ;
 import { IoCodeSlashOutline } from 'react-icons/io5'
-import { MdOutlineMenu } from "react-icons/md";
 import Technologies from '@/app/components/technologies/tecnologias.js' ;
 import TechnologiesComponent from "@/app/components/technologies/technologies"
 import Experience from '@/app/components/experience/experiencia';
 import ExperienceComponent from '@/app/components/experience/Experience';
 import proyectos from '@/app/components/proyect/proyectos';  
-import ProyectComponent from "../../../app/components/proyect/Proyect"
-import MenuLateral from '../leftMenuMobile/menu';
+import ProyectComponent from "../../../app/components/proyect/Proyect" ;
 import Estudios from '@/app/components/studies/estudios.js' ;
 import StudiesMobile from '@/app/components/studiesMobile/Experience';
-import TechnologiesLite from '@/app/components/technologies/TechnologiesLite';
 
 const GridTwo = (  ) => {
 
@@ -28,7 +25,7 @@ const GridTwo = (  ) => {
 
 
   return (
-    <article className="segundaVentana  shadow-xl bg-[#212121] my-2 mx-1 col-span-12 rounded-md overflow-hidden scrolling pb-4
+    <article className="segundaVentana  shadow-xl bg-[#212121] my-2 col-span-12 rounded-md overflow-hidden scrolling pb-4 
                               md:col-span-8 
                               xl:col-span-6">           
 
@@ -85,9 +82,6 @@ const GridTwo = (  ) => {
                 img={proyecto.img}/>
           ))}
 
-           { /* proyectos.map( (proyecto) => (
-                <ProyectComponent key={proyecto.id} date={proyecto.date} proyect={proyecto.proyect} desc={proyecto.desc} img={proyecto.img}/>
-           )) */}
 
           </section>
 
@@ -115,7 +109,7 @@ const GridTwo = (  ) => {
            
           </div>
 
-          <div className="border-t-2 mt-4 border-[#404040] pb-8 w-[90%] mx-auto flex flex-col gap-y-4 md:hidden">
+          <div className="border-t-2 mt-4 border-[#404040] pb-8 w-[90%] mx-auto flex flex-col gap-y-4 xl:hidden">
             
             <h3 className="mt-3 text-gray-200 font-semibold mb-4 text-center"> Official certifications </h3>
 

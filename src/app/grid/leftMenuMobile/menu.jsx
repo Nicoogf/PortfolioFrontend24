@@ -8,6 +8,8 @@ import { FaGithub } from 'react-icons/fa'
 import { IoIosGitMerge } from 'react-icons/io'
 import { IoDownloadOutline, IoHomeOutline } from 'react-icons/io5'
 import { TfiMedallAlt } from 'react-icons/tfi'
+import { RiDiscordLine } from "react-icons/ri";
+
 import profile from "../../../../public/profile.jpg" ;
 
 const MenuLateral = ( props ) => {
@@ -47,19 +49,19 @@ const MenuLateral = ( props ) => {
 
                 <Image crossOrigin="anonymous" 
                        src={profile} 
-                       className="w-24 h-24 rounded-full mb-2" 
+                       className="w-20 h-20 rounded-full mb-2" 
                        alt={""}
                 />
 
-                <div className=" absolute bottom-2 left-[85px] rounded-full bg-lime-400 h-4 w-4 animate-pulse cursor-pointer">
-
+                <div className=" absolute bottom-1 left-[65px] rounded-full bg-lime-400 h-4 w-4 animate-pulse cursor-pointer">
                 </div>
+
               </div>
 
               <div className="absolute top-2 right-2 flex flex-row gap-x-3">
 
-                <Link href={"#"} >
-                  <IoHomeOutline className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
+                <Link href={"https://discordapp.com/users/693586473894805535"} target="_blank">
+                  <RiDiscordLine className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
                 </Link>
 
                 <Link href={"https://github.com/Nicoogf"} target="_blank" crossOrigin="anonymous">
