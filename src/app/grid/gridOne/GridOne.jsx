@@ -41,7 +41,13 @@ const GridOne = () => {
 
     <motion.article className="hidden rounded-md my-2 mr-1 bg-[#212121]
                             md:flex md:col-span-4 md:flex-col
-                            xl:col-span-3 shadow-xl">
+                            xl:col-span-3 shadow-xl"
+                    initial={{y:10 , opacity:0}}
+                    animate={{
+                      y:0,
+                      opacity:1,
+                      transition:{duration:0.4 , type:"spring" , stiffness:200 , delay:0.1},
+                    }}>
 
           <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
             <div className="m-2">

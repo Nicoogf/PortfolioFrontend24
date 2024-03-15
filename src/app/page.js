@@ -7,6 +7,7 @@ import MenuLateral from "./grid/leftMenuMobile/menu";
 import { MdOutlineMenu } from "react-icons/md";
 import { useState } from "react";
 import { Background } from "./components/background/Background";
+import { RiDiscordLine } from "react-icons/ri";
 
 export default function MainApp() {
 
@@ -24,9 +25,9 @@ export default function MainApp() {
 
        <section className="relative bg-transparent w-[95%] grid grid-cols-12 mx-auto h-[98%] rounded-xl max-w-[1280px] z-50">
 
-          <button className='z-50 absolute top-4 right-4 border-2 border-lime-400 text-lime-400 bg-transparent cursor-pointer rounded-xl md:hidden'
-                  onClick={toggleMenu}>           
-                   <MdOutlineMenu  className='text-4xl p-2'/>
+          <button className='z-50 absolute top-8 right-4 bg-transparent cursor-pointer rounded-xl md:hidden'
+                  onClick={toggleMenu}>         
+                   <MdOutlineMenu className="bg-[#404040] text-4xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
           </button>     
 
 

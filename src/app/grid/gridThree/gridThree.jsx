@@ -5,13 +5,19 @@ import Technologies from '@/app/components/technologies/tecnologias.js' ;
 import TechnologiesLite from '@/app/components/technologies/TechnologiesLite'
 import Estudios from "@/app/components/studies/estudios.js"
 import Studies from "@/app/components/studies/Studies"
-
+import { motion } from "framer-motion"
 
 
 const GridThree = () => {
   return (
-    <article className="hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
-                            xl:flex xl:col-span-3 flex-col">
+    <motion.article className="hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
+                            xl:flex xl:col-span-3 flex-col"
+                            initial={{y:10 , opacity:0}}
+                            animate={{
+                              y:0,
+                              opacity:1,
+                              transition:{duration:0.4 , type:"spring" , stiffness:200, delay:0.3},
+                            }}>
                               
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
             <h3 className="text-lg font-bold mb-2 text-gray-200 text-center"> Curriculum </h3>
@@ -50,7 +56,7 @@ const GridThree = () => {
 
             </div>
           </div>
-    </article>
+    </motion.article>
   )
 }
 
