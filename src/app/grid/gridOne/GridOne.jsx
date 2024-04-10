@@ -51,7 +51,7 @@ const GridOne = () => {
   
   return (
 
-    <motion.article className={`hidden ${ isLight ? "bg-gray-100": "bg-[#212121]"} rounded-md my-2 mr-1 
+    <motion.article className={`hidden ${ isLight ? "bg-gray-100/80": "bg-[#212121]/80"} rounded-md my-2 mr-1 
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 shadow-xl`}
                     initial={{y:10 , opacity:0}}
@@ -61,7 +61,7 @@ const GridOne = () => {
                       transition:{duration:0.4 , type:"spring" , stiffness:200 , delay:0.1},
                     }}>
 
-          <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
+          <section className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } relative h-[250px] border-b-2 w-[95%] mx-auto `}>
             <div className="m-2">
               <div className="relative">
 
@@ -79,11 +79,11 @@ const GridOne = () => {
               <div className="absolute top-3 right-3 flex flex-row gap-x-2">
 
                 <Link href={"https://discordapp.com/users/693586473894805535"} target="_blank" >
-                  <RiDiscordLine className={` ${ isLight ? "bg-gray-300 text-gray-800 ": "bg-[#404040]" } bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} crossOrigin="anonymous"/>
+                  <RiDiscordLine className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" } bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} crossOrigin="anonymous"/>
                 </Link>
 
                 <Link href={"https://github.com/Nicoogf"} target="_blank" crossOrigin="anonymous">
-                  <FaGithub className={` ${ isLight ? "bg-gray-300 text-gray-800 ": "bg-[#404040]" }  bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} crossOrigin="anonymous" />
+                  <FaGithub className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" } bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} crossOrigin="anonymous" />
                 </Link>
 
               </div>
@@ -123,7 +123,7 @@ const GridOne = () => {
             </div>
           </section>
 
-          <section className="text-gray-200 w-[90%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
+          <section className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } text-gray-200 w-[90%] mx-auto mt-4 border-b-2 pb-4 `}>
             <h2 className= {`${ isLight ? "text-gray-950 ": "text-gray-100" } text-lg font-bold mb-2`}> Bio </h2>
             <p className={`${ isLight ? "text-gray-800 ": "text-gray-400" } text-xs mb-4`}>
              He tenido el privilegio de desarrollar mi carrera profesional durante los últimos 3 años. Con una sólida experiencia consolidada sector comercial principalmente en la atención al cliente. 
@@ -156,7 +156,7 @@ const GridOne = () => {
               <textarea  placeholder="Ingresar mensaje" name="message"
               className={` ${ isLight ? "bg-gray-300":"bg-[#404040]"} w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2`}/>
               
-              <button className={`${ isLight  ? "border-gray-800 text-gray-800 hover:bg-gray-100 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border  hover:scale-110  transition-all duration-200 `}> Enviar </button>
+              <button className={`${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border  hover:scale-110  transition-all duration-200 `}> Enviar </button>
             </form>
           </section>
 

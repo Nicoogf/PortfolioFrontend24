@@ -47,8 +47,15 @@ const MenuLateral = ( props ) => {
     
     const estadoDeMenu = state.menuVisible
 
+    const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
+    const isLight = coloroOscuro.colorTheme
+  
+    console.log( isLight )
+  
+    
+
   return (
-    <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ventana absolute left-0 bottom-0 top-0  w-[90%] z-50 rounded-xl  overflow-hidden md:hidden shadow-xl max-w-[400px]`}
+    <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ${ isLight ? "bg-transparent": "bg-[#212121]/80"} ventana absolute left-0 bottom-0 top-0  w-[90%] z-50 rounded-xl  overflow-hidden md:hidden max-w-[400px]`}
     initial={{y:-10 , opacity:0}}
     animate={{
            y:0,
@@ -56,11 +63,11 @@ const MenuLateral = ( props ) => {
            transition:{duration:0.3},
       }}>
        
-        <article className="rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6 grid-two
+        <article className={` ${ isLight ? "bg-gray-100": "bg-[#212121]/80"} rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6 grid-two
                             md:flex md:col-span-4 md:flex-col
-                            xl:col-span-3 ">
+                            xl:col-span-3 `}>
 
-          <section className="relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto">
+          <section className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } relative h-[250px]  border-b-2 border-[#404040] w-[95%] mx-auto`}>
             
             <div className="m-2">
 
@@ -80,26 +87,27 @@ const MenuLateral = ( props ) => {
               <div className="absolute top-2 right-2 flex flex-row gap-x-3">
 
                 <Link href={"https://discordapp.com/users/693586473894805535"} target="_blank">
-                  <RiDiscordLine className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
+                  <RiDiscordLine className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" }  bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110 `} crossOrigin="anonymous"/>
                 </Link>
 
                 <Link href={"https://github.com/Nicoogf"} target="_blank" crossOrigin="anonymous">
-                  <FaGithub className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous" />
+                  <FaGithub className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" }  bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110 `} crossOrigin="anonymous" />
                 </Link>
 
                 <button className='bg-transparent cursor-pointer rounded-xl md:hidden'
                   onClick={()=> dispatch(ocultar())}>         
-                   <RxExit className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
+                   <RxExit className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" }  bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110 `}  crossOrigin="anonymous"/>
                 </button>     
 
               </div>
 
               <div className="mb-4">
-                <h1 className="text-2xl font-bold text-white mb-3">
+                <h1 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-2xl font-bold  mb-3 `}>
                   Nicolas Falabella
                 </h1>
-                <h5 className="-my-1 text-sm text-gray-300"> Frontend Developer </h5>
-                <h5 className="mt-1 text-gray-300 text-sm "> nicolasgfalabella@gmail.com </h5>
+                <h5 className={` ${ isLight ? "text-gray-700 ": "text-gray-300" } -my-1 text-sm`}> Frontend Developer 
+                </h5>
+                <h5 className={` ${ isLight ? "text-gray-800 ": "text-gray-300" } mt-1 text-sm `}> nicolasgfalabella@gmail.com </h5>
               </div>
 
               <section className="flex flex-row flex-wrap gap-x-1 z-40">
@@ -129,9 +137,9 @@ const MenuLateral = ( props ) => {
 
           </section>
 
-          <section className="text-gray-200 w-[90%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
-            <h2 className="text-lg font-bold mb-2"> Bio </h2>
-            <p className="text-gray-400 text-xs mb-4">
+          <section className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } text-gray-200 w-[90%] mx-auto mt-4 border-b-2 border-[#404040] pb-4 `}>
+            <h2 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-lg font-bold mb-2`}> Bio </h2>
+            <p className={` ${ isLight ? "text-gray-900 ": "text-gray-400" } text-gray-400 text-xs mb-4`}>
              He tenido el privilegio de desarrollar mi carrera profesional durante los últimos 3 años. Con una sólida experiencia consolidada sector comercial principalmente en la atención al cliente. 
              <br />
               Mi trayectoria profesional ha experimentado un giro hacia el area de la programacion, especializándome en el sector Frontend
@@ -139,19 +147,19 @@ const MenuLateral = ( props ) => {
             <div>
 
             <div className="text-xs font-semibold flex flex-row gap-x-2 mb-2">
-                <TfiMedallAlt />
-                <h6> 2 Años como desarollador web</h6>  
+                <TfiMedallAlt className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } `}/>
+                <h6 className={`${ isLight ? "text-gray-950 ": "text-gray-100" }`}> 2 Años como desarollador web</h6>  
             </div>
 
               <div className="text-xs font-semibold flex flex-row gap-x-2">
-               <IoIosGitMerge />
-                <h6> 14 Proyectos </h6>
+               <IoIosGitMerge className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } `}/>
+                <h6 className={`${ isLight ? "text-gray-950 ": "text-gray-100" }`}> 14 Proyectos </h6>
               </div>
             </div>
 
             
             <a href="/Nicolas_Falabella.pdf" download>               
-               <div className=" mt-8 flex flex-row items-center justify-center  bg-transparent border border-gray-400 text-gray-400 rounded-lg mx-auto gap-x-2 hover:scale-105 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 transition-all duration-200 w-[125px]">
+               <div className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} mt-8 flex flex-row items-center justify-center   rounded-lg mx-auto gap-x-2 transition-all duration-200 w-[125px] hover:scale-110 `}>
                <IoDownloadOutline />
                <h6 className=" py-2 text-xs font-semibold"> Download CV </h6> 
                </div>            
@@ -170,7 +178,7 @@ const MenuLateral = ( props ) => {
 
           <textarea  placeholder="Ingresar mensaje" name="message"
           className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
-          <button className="w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"> Enviar </button>
+          <button className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 `}> Enviar </button>
           </form>
           </section>
 

@@ -46,7 +46,7 @@ const GridTwo = (  ) => {
 
 
   return (
-    <motion.article className={` ${ isLight ? "bg-gray-100": "bg-[#212121]" } relative segundaVentana  grid-two shadow-xl  my-2 col-span-12 rounded-md overflow-hidden scrolling pb-4 transition-all duration-500
+    <motion.article className={` ${ isLight ? "bg-gray-100/80": "bg-[#212121]/80" } relative segundaVentana  grid-two shadow-xl  my-2 col-span-12 rounded-md overflow-hidden scrolling pb-4 transition-all duration-500
                               md:col-span-8 
                               xl:col-span-6`}
                               initial={{y:-10 , opacity:0}}
@@ -62,14 +62,14 @@ const GridTwo = (  ) => {
 
           <button className={`${estadoDeMenu ? "hidden" : "flex"}  z-50  top-8 right-4 bg-transparent cursor-pointer rounded-xl`}
                   onClick={() => dispatch(mostrar())}>         
-                   <BsTranslate className={` ${ isLight ? "bg-gray-300 text-gray-800": "bg-[#404040]" }  text-4xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} />
+                   <BsTranslate className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" }  text-4xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} />
           </button>   
 
           <button className={`${estadoDeMenu ? "hidden" : "flex"} z-50  top-8 right-4 bg-transparent cursor-pointer rounded-xl `}
                   onClick={  isLight ? () =>  dispatch(darkMode()) 
                                       :() =>  dispatch(lightMode())
                           }>         
-                   <IoMoonOutline className={` ${ isLight ? "bg-gray-300 text-gray-800 ": "bg-[#404040]" }  text-4xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} />
+                   <IoMoonOutline className={` ${ isLight ? " border border-black bg-gray-300 text-gray-800 hover:bg-lime-400/90": "border border-transparent bg-[#404040]" }  text-4xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110`} />
           </button>   
 
            
@@ -148,7 +148,7 @@ const GridTwo = (  ) => {
 
           </section>
 
-          <div className={`${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } border-t-2 mt-4  pb-8 w-[90%] mx-auto xl:hidden`}>
+          <div className={`${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" }border-t-2 mt-4  pb-8 w-[90%] mx-auto xl:hidden`}>
 
             <h3 className={`${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3  font-semibold mb-4 text-center`}> Skills -Tech Stack </h3>
 
@@ -162,9 +162,9 @@ const GridTwo = (  ) => {
 
           </div>
 
-          <div className="border-t-2 mt-4 border-[#404040] pb-8 w-[90%] mx-auto flex flex-col gap-y-4">
+          <div className= {` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" }border-t-2 mt-4 pb-8 w-[90%] mx-auto flex flex-col gap-y-4 `}>
             
-            <h3 className={`${ isLight ? "text-gray-950 ": "text-gray-200" }mt-3 text-gray-200 font-semibold mb-4 text-center`}> Experiencia Laboral </h3>
+            <h3 className={`${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3 text-gray-200 font-semibold mb-4 text-center`}> Experiencia Laboral </h3>
 
               {Experience.map( (experiencia , index ) => (
                   <ExperienceComponent key={index}  name={experiencia.name} img={experiencia.img} rol={experiencia.rol} date={experiencia.date}/>
@@ -172,7 +172,7 @@ const GridTwo = (  ) => {
            
           </div>
 
-          <div className="border-t-2 mt-4 border-[#404040] pb-8 w-[90%] mx-auto flex flex-col gap-y-4 xl:hidden">
+          <div className={` ${ isLight ? "border-[#aaaaaa] " : "border-[#404040]" } border-t-2 mt-4 pb-8 w-[90%] mx-auto flex flex-col gap-y-4 xl:hidden `}>
             
             <h3 className={` ${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3 text-base sm:text-lg text-gray-200 font-semibold mb-4 text-center`}> Official certifications </h3>
 

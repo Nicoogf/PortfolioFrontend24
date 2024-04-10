@@ -22,7 +22,7 @@ const GridThree = () => {
   const dispatch = useDispatch()
   
   return (
-    <motion.article className={` ${ isLight ? "bg-gray-100": "bg-[#212121]"} hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
+    <motion.article className={` ${ isLight ? "bg-gray-100/80": "bg-[#212121]/80" } hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
                             xl:flex xl:col-span-3 flex-col `}
                             initial={{y:10 , opacity:0}}
                             animate={{
@@ -31,12 +31,12 @@ const GridThree = () => {
                               transition:{duration:0.4 , type:"spring" , stiffness:200, delay:0.3},
                             }}>
                               
-          <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
+          <div className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } w-[85%] mx-auto mt-4 border-b-2 pb-4 `}>
             <h3 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-lg font-bold mb-2 text-center `}> Curriculum </h3>
             <p className={`${ isLight ? "text-gray-800 ": "text-gray-300" } text-xs mb-4 text-center`}> A continuacion dejare el boton de descarga para obtener el curriculum actualizado en formato PDF</p>
             
             <a href="/Nicolas_Falabella.pdf" download>               
-                <div className={`  ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-gray-100 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} } flex flex-row items-center justify-center  border  rounded-lg w-[50%] mx-auto gap-x-2 hover:scale-105  hover:text-gray-900  transition-all duration-200 `}>
+                <div className={`  ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} } flex flex-row items-center justify-center  border  rounded-lg w-[50%] mx-auto gap-x-2 hover:scale-105  hover:text-gray-900  transition-all duration-200 `}>
                 <IoDownloadOutline />
                 <h6 className=" py-2 text-xs font-semibold"> Download </h6> 
                 </div>             
@@ -44,7 +44,7 @@ const GridThree = () => {
 
           </div>
 
-          <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
+          <div className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } w-[85%] mx-auto mt-4 border-b-2 pb-4 `}>
 
             <h3 className= {` ${ isLight ? "text-gray-950 ": "text-gray-100"} font-semibold text-center `}>Official certifications</h3>
 
@@ -58,7 +58,7 @@ const GridThree = () => {
           </div>
 
           <div className=" mt-4 pb-8 w-[90%] mx-auto scrolling grid-two">
-            <h3 className="mt-3 text-gray-200 font-semibold mb-4 text-center"> Skills -Tech Stack </h3>
+            <h3 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } mt-3 text-gray-200 font-semibold mb-4 text-center `}> Skills -Tech Stack </h3>
 
             <div className="flex flex-wrap items-center justify-center w-[90%] mx-auto gap-2">  
 
