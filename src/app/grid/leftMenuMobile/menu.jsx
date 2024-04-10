@@ -171,13 +171,14 @@ const MenuLateral = ( props ) => {
           <form className="flex gap-y-2 flex-col" ref={form} onSubmit={sendEmail}>
 
           <input placeholder="Remitente" name='name' 
-          className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
+            className={` ${ isLight ? "bg-gray-200 text-black":"bg-[#404040] text-white"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
 
           <input placeholder="Asunto" name="asunto"
-                className="w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm"/>
+                className={` ${ isLight ? "bg-gray-200 text-black":"bg-[#404040] text-white"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
 
           <textarea  placeholder="Ingresar mensaje" name="message"
-          className="resize-none w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2"/>
+         className={` ${ isLight ? "bg-gray-200":"bg-[#404040]"} w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2`}/>
+         
           <button className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 `}> Enviar </button>
           </form>
           </section>

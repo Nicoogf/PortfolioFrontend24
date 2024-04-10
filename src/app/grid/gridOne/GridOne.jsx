@@ -99,21 +99,21 @@ const GridOne = () => {
               <section className="flex flex-row flex-wrap gap-x-1 -mt-1">
                 <article>
                 <Link href={"https://api.whatsapp.com/send?phone=5492324584106"} target="_blank">
-                  <h6 className= {` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-200 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Whatsapp </h6>
+                  <h6 className= {` ${ isLight ? "text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "text-gray-300 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } border border-gray-700 text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Whatsapp </h6>
                 </Link>    
                 </article>
 
                 <article>
                 <Link href={"mailto:nicolasgfalabella@correo.com"} 
                 target="_blank" >
-                  <h6 className= {` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-200 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Email </h6>
+                  <h6 className= {` ${ isLight ? "text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "text-gray-300 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } border border-gray-700 text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Email </h6>
                   </Link>  
                 </article>
 
                 <article>
                 <Link href={"https://www.instagram.com/nfalabella_/"} 
                 target="_blank" >
-                  <h6 className= {` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-200 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Instagram </h6>
+                  <h6 className= {` ${ isLight ? "text-gray-800 bg-transparent hover:bg-lime-400/90  hover:text-gray-800 ": "text-gray-300 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" } border border-gray-700 text-gray-200 text-[11px] font-semibold cursor-pointer bg-[#404040] px-2 py-1 rounded-lg  transition-all duration-200 hover:scale-105 `}> Instagram </h6>
                   </Link>  
                 </article>
 
@@ -148,13 +148,13 @@ const GridOne = () => {
             <form className="flex gap-y-2 flex-col" ref={form} onSubmit={sendEmail}>
 
               <input placeholder="Remitente" name='name' 
-              className={` ${ isLight ? "bg-gray-300":"bg-[#404040]"} w-full rounded-md py-2 p-2 placeholder:text-sm text-sm `}/>
+              className={` ${ isLight ? "bg-gray-200":"bg-[#404040]"} w-full rounded-md py-2 p-2 placeholder:text-sm text-sm `}/>
 
               <input placeholder="Asunto" name="asunto"
-                     className={` ${ isLight ? "bg-gray-300":"bg-[#404040]"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
+                     className={` ${ isLight ? "bg-gray-200 text-black":"bg-[#404040] text-white"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
 
               <textarea  placeholder="Ingresar mensaje" name="message"
-              className={` ${ isLight ? "bg-gray-300":"bg-[#404040]"} w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2`}/>
+              className={` ${ isLight ? "bg-gray-200":"bg-[#404040]"} w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2`}/>
               
               <button className={`${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border  hover:scale-110  transition-all duration-200 `}> Enviar </button>
             </form>

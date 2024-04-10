@@ -17,7 +17,7 @@ const Proyect = ( props ) => {
   const dispatch = useDispatch()
 
   return (
-    <a className={` ${ isLight ? "bg-gray-200/80" : "bg-[#404040]/30" } flex flex-row gap-x-2 py-3 items-center cursor-pointer hover:py-4 transition-all duration-500
+    <a className={` ${ isLight ? "bg-transparent" : "bg-[#404040]/30" } flex flex-row gap-x-2 py-3 items-center cursor-pointer hover:py-4 transition-all duration-500
                               sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories shadow-md`} href='#'>
 
                 <Image crossOrigin="anonymous" 

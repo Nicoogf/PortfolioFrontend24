@@ -101,29 +101,29 @@ const GridTwo = (  ) => {
           </div>
 
 
-          <div className="w-[95%] mx-auto flex flex-row justify-center gap-x-2 mt-2 sm:gap-x-2 sm:justify-center">
+          <div className="w-[95%] mx-auto flex flex-row justify-center gap-x-2 mt-3 sm:gap-x-2 sm:justify-center">
 
            <h6 
            onClick={() => handleCategoryClick('frontend')}
-           className={` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-300 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
+           className={` border ${ isLight ? "border-gray-800 text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "border-transparent text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
            sm:py-2 sm:w-[100px] cursor-pointer`}> 
            NextJs
            </h6>
            <h6 
            onClick={() => handleCategoryClick('wordpress')}
-           className={` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-300 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
+           className={` border ${ isLight ? "border-gray-800 text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "border-transparent text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
            sm:py-2 sm:w-[100px] cursor-pointer`}> 
            Wordpress
            </h6>
 
            <h6 
             onClick={() => handleCategoryClick('ux')}
-            className={` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-300 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
-           sm:py-2 sm:w-[100px] cursor-pointer`}> 
+            className={` border ${ isLight ? "border-gray-800 text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "border-transparent text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
+            sm:py-2 sm:w-[100px] cursor-pointer`}> 
            Clones
            </h6>
            <h6  onClick={() => handleCategoryClick('Todos los proyectos')}
-          className={` ${ isLight ? "text-gray-800 bg-gray-300 hover:bg-gray-600 hover:text-gray-300 ": "text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
+          className={` border ${ isLight ? "border-gray-800 text-gray-800 bg-transparent hover:bg-lime-400/90 hover:text-gray-800 ": "border-transparent text-gray-200 bg-[#141414] hover:bg-gray-100 hover:text-[#141414]" }  text-[10px] w-[65px]  text-center py-2 rounded-md font-semibold transition-all duration-200
           sm:py-2 sm:w-[100px] cursor-pointer`}> 
             Todo
            </h6>
@@ -133,7 +133,7 @@ const GridTwo = (  ) => {
 
           
 
-          <section className="proyectos relative w-[90%] mx-auto mt-4 flex flex-col gap-y-2 py-4 h-[250px]  xl:h-[350px] overflow-hidden scrolling">      
+          <section className="proyectos relative w-[90%] mx-auto mt-2 flex flex-col gap-y-2 py-4 h-[250px]  xl:h-[350px] overflow-hidden scrolling">      
           
           
           {filteredProjects.map(proyecto => (
@@ -148,7 +148,7 @@ const GridTwo = (  ) => {
 
           </section>
 
-          <div className={`${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" }border-t-2 mt-4  pb-8 w-[90%] mx-auto xl:hidden`}>
+          <div className={`${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } border-t-2 mt-4  pb-8 w-[90%] mx-auto xl:hidden`}>
 
             <h3 className={`${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3  font-semibold mb-4 text-center`}> Skills -Tech Stack </h3>
 
@@ -162,7 +162,7 @@ const GridTwo = (  ) => {
 
           </div>
 
-          <div className= {` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" }border-t-2 mt-4 pb-8 w-[90%] mx-auto flex flex-col gap-y-4 `}>
+          <div className= {` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } border-t-2 mt-4 pb-8 w-[90%] mx-auto flex flex-col gap-y-4 `}>
             
             <h3 className={`${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3 text-gray-200 font-semibold mb-4 text-center`}> Experiencia Laboral </h3>
 
