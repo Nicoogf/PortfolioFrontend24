@@ -13,7 +13,8 @@ import { RiDiscordLine } from "react-icons/ri";
 import { RxExit } from "react-icons/rx";
 
 import profile from "../../../../public/profile.jpg" ;
-
+import { useSelector , useDispatch } from "react-redux" ;
+import { mostrar ,ocultar } from '@/app/redux/actions/nightModeActions';
 
 const MenuLateral = ( props ) => {
 
@@ -37,15 +38,17 @@ const MenuLateral = ( props ) => {
     e.target.reset()
   };
 
-  const [menuNav , setMenuNav] = useState(false)
+ 
 
-  function toggleMenuNav () {
-    setMenuNav(!menuNav)
-    console.log(menuNav)
-  }
+
+    const state = useSelector((state) =>  state.nightMode)
+
+    const dispatch = useDispatch()
+    
+    const estadoDeMenu = state.menuVisible
 
   return (
-    <motion.nav className={` ${props.menu == true ? "block" : "hidden" }  ventana absolute left-0 bottom-0 top-0  w-[90%] z-50 rounded-xl  overflow-hidden md:hidden shadow-xl max-w-[400px]`}
+    <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ventana absolute left-0 bottom-0 top-0  w-[90%] z-50 rounded-xl  overflow-hidden md:hidden shadow-xl max-w-[400px]`}
     initial={{y:-10 , opacity:0}}
     animate={{
            y:0,
@@ -53,7 +56,7 @@ const MenuLateral = ( props ) => {
            transition:{duration:0.3},
       }}>
        
-        <article className="rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6
+        <article className="rounded-md my-2 mx-1 bg-[#212121] h-full scrolling pb-6 grid-two
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 ">
 
@@ -85,7 +88,7 @@ const MenuLateral = ( props ) => {
                 </Link>
 
                 <button className='bg-transparent cursor-pointer rounded-xl md:hidden'
-                  onClick={toggleMenuNav}>         
+                  onClick={()=> dispatch(ocultar())}>         
                    <RxExit className="bg-[#404040] text-3xl p-2 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 hover:scale-110" crossOrigin="anonymous"/>
                 </button>     
 

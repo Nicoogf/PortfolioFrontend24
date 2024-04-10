@@ -1,10 +1,24 @@
 import Image from 'next/image' ;
 import React from 'react' ;
+import {useSelector , useDispatch } from "react-redux" ;
+
+
 
 const Proyect = ( props ) => {
+
+  const state = useSelector((state) =>  state.nightMode)
+  const estadoDeMenu = state.menuVisible
+
+  const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
+  const isLight = coloroOscuro.colorTheme
+
+  console.log( isLight )
+
+  const dispatch = useDispatch()
+
   return (
-    <a className="flex flex-row gap-x-2 items-center cursor-pointer hover:py-4 transition-all duration-500
-                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories" href='#'>
+    <a className={` ${ isLight ? "bg-gray-200/80" : "bg-[#404040]/30" } flex flex-row gap-x-2 py-3 items-center cursor-pointer hover:py-4 transition-all duration-500
+                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories`} href='#'>
 
                 <Image crossOrigin="anonymous" 
                        width={100} 
@@ -16,18 +30,21 @@ const Proyect = ( props ) => {
                 />
 
                 <div>
-                  <h4 className="text-[10px] text-gray-400
-                                sm:text-[12px]">
+                  <h4 className={`${ isLight ? "text-gray-800" : "text-gray-400" } 
+                                text-[10px] 
+                                sm:text-[12px]`}>
                     { props.date }
                   </h4>
 
-                  <h3 className="text-sm font-semibold text-gray-100 mb-1
-                                sm:text-base">
+                  <h3 className={`${ isLight ? "text-gray-900" : "text-gray-100" } 
+                                text-sm font-semibold  mb-1
+                                sm:text-base`}>
                     {props.proyect}
                   </h3>
 
-                  <h6 className="text-[10px] text-gray-400
-                                sm:text-sm">
+                  <h6 className={` ${ isLight ? "text-gray-800" : "text-gray-400" } 
+                                text-[10px] 
+                                sm:text-sm`}>
                     {props.desc}
                   </h6>
 
