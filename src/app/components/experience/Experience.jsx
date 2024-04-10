@@ -19,7 +19,7 @@ const Experience = ( props ) => {
       
     <Image crossOrigin="anonymous" 
            src={props.img} 
-           className="w-16 h-16 rounded-full border-4 border-gray-700" 
+           className={` ${ isLight ? "border-gray-300" : "border-gray-700"} w-16 h-16 rounded-full border-4  `} 
            alt={props.name} 
            width={100} 
            height={100} 
