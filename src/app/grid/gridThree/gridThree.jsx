@@ -6,12 +6,24 @@ import TechnologiesLite from '@/app/components/technologies/TechnologiesLite'
 import Estudios from "@/app/components/studies/estudios.js"
 import Studies from "@/app/components/studies/Studies"
 import { motion } from "framer-motion"
+import {useSelector , useDispatch } from "react-redux" ;
 
 
 const GridThree = () => {
+
+  const state = useSelector((state) =>  state.nightMode)
+  const estadoDeMenu = state.menuVisible
+
+  const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
+  const isLight = coloroOscuro.colorTheme
+
+  console.log( isLight )
+
+  const dispatch = useDispatch()
+  
   return (
-    <motion.article className="hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
-                            xl:flex xl:col-span-3 flex-col"
+    <motion.article className={` ${ isLight ? "bg-gray-100": "bg-[#212121]"} hidden shadow-xl rounded-md my-2 mx-1 bg-[#212121] overflow-hidden 
+                            xl:flex xl:col-span-3 flex-col `}
                             initial={{y:10 , opacity:0}}
                             animate={{
                               y:0,
@@ -20,21 +32,21 @@ const GridThree = () => {
                             }}>
                               
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
-            <h3 className="text-lg font-bold mb-2 text-gray-200 text-center"> Curriculum </h3>
-            <p className="text-gray-400 text-xs mb-4 text-center"> A continuacion dejare el boton de descarga para obtener el curriculum actualizado en formato PDF</p>
-            <a href="/Nicolas_Falabella.pdf" download>
-               
-                <div className="flex flex-row items-center justify-center  bg-transparent border border-gray-400 text-gray-400 rounded-lg w-[50%] mx-auto gap-x-2 hover:scale-105 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 transition-all duration-200">
+            <h3 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-lg font-bold mb-2 text-center `}> Curriculum </h3>
+            <p className={`${ isLight ? "text-gray-800 ": "text-gray-300" } text-xs mb-4 text-center`}> A continuacion dejare el boton de descarga para obtener el curriculum actualizado en formato PDF</p>
+            
+            <a href="/Nicolas_Falabella.pdf" download>               
+                <div className={`  ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-gray-100 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} } flex flex-row items-center justify-center  border  rounded-lg w-[50%] mx-auto gap-x-2 hover:scale-105  hover:text-gray-900  transition-all duration-200 `}>
                 <IoDownloadOutline />
                 <h6 className=" py-2 text-xs font-semibold"> Download </h6> 
-                </div>
-             
+                </div>             
             </a>
+
           </div>
 
           <div className="w-[85%] mx-auto mt-4 border-b-2 border-[#404040] pb-4">
 
-            <h3 className="text-gray-200 font-semibold text-center">Official certifications</h3>
+            <h3 className= {` ${ isLight ? "text-gray-950 ": "text-gray-100"} font-semibold text-center `}>Official certifications</h3>
 
 
             {Estudios.map( (estudio , index ) => (
