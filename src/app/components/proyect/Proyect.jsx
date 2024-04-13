@@ -1,24 +1,15 @@
 import Image from 'next/image' ;
 import React from 'react' ;
-import {useSelector , useDispatch } from "react-redux" ;
+import { useSelector  } from "react-redux" ;
 
-
-
-const Proyect = ( props ) => {
-
-  const state = useSelector((state) =>  state.nightMode)
-  const estadoDeMenu = state.menuVisible
+const Proyect = ( props ) => {  
 
   const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
-  const isLight = coloroOscuro.colorTheme
-
-  console.log( isLight )
-
-  const dispatch = useDispatch()
+  const isLight = coloroOscuro.colorTheme  
 
   return (
-    <a className={` ${ isLight ? "bg-transparent" : "bg-[#404040]/30" } flex flex-row gap-x-2 py-3 items-center cursor-pointer hover:py-4 transition-all duration-500
-                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories shadow-md`} href='#'>
+    <a className={` ${ isLight ? "bg-transparent border-2 border-gray-600" : " border-2 border-transparent bg-[#404040]/30" } flex flex-row gap-x-2 py-3 items-center cursor-pointer hover:py-4 transition-all duration-500
+                              sm:gap-x-4 hover:bg-gray-600/20 rounded-xl categories shadow-md   w-[92%] mx-auto`} href='#'>
 
                 <Image crossOrigin="anonymous" 
                        width={100} 

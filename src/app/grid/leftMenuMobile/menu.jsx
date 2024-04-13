@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion"
@@ -14,7 +14,7 @@ import { RxExit } from "react-icons/rx";
 
 import profile from "../../../../public/profile.jpg" ;
 import { useSelector , useDispatch } from "react-redux" ;
-import { mostrar ,ocultar } from '@/app/redux/actions/nightModeActions';
+import { ocultar } from '@/app/redux/actions/nightModeActions';
 
 const MenuLateral = ( props ) => {
 
@@ -49,13 +49,10 @@ const MenuLateral = ( props ) => {
 
     const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
     const isLight = coloroOscuro.colorTheme
-  
-    console.log( isLight )
-  
-    
+
 
   return (
-    <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ${ isLight ? "bg-transparent": "bg-[#212121]/80"} ventana absolute left-0 bottom-0 top-0  w-[90%] z-50 rounded-xl  overflow-hidden md:hidden max-w-[400px]`}
+    <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ${ isLight ? "bg-transparent": "bg-[#212121]/80"} ventana absolute -left-1 bottom-0 -top-2  w-[95%] z-50 rounded-xl  overflow-hidden md:hidden max-w-[400px]`}
     initial={{y:-10 , opacity:0}}
     animate={{
            y:0,

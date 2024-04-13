@@ -10,7 +10,7 @@ import { IoIosGitMerge } from 'react-icons/io'
 import { TfiMedallAlt } from 'react-icons/tfi'
 import { RiDiscordLine } from "react-icons/ri";
 
-import {useSelector , useDispatch } from "react-redux" ;
+import { useSelector  } from "react-redux" ;
 
 import profile from "../../../../public/profile.jpg"
 
@@ -36,22 +36,19 @@ const GridOne = () => {
     e.target.reset()
   };
 
-  const state = useSelector((state) =>  state.nightMode)
-  const estadoDeMenu = state.menuVisible
-
   const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
   const isLight = coloroOscuro.colorTheme
 
-  console.log( isLight )
 
-  const dispatch = useDispatch()
+
+  
   
 
 
   
   return (
 
-    <motion.article className={`hidden ${ isLight ? "bg-gray-100/80": "bg-[#212121]/80"} rounded-md my-2 mr-1 
+    <motion.article className={`hidden ${ isLight ? "bg-gray-100/80": "bg-[#212121]/80"} rounded-md my-2 mr-1 overflow-y-scroll grid-two
                             md:flex md:col-span-4 md:flex-col
                             xl:col-span-3 shadow-xl`}
                     initial={{y:10 , opacity:0}}

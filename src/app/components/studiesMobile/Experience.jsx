@@ -1,19 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import {useSelector , useDispatch } from "react-redux" ;
+import { useSelector  } from "react-redux" ;
 
-const StudiesMobile = ( props ) => {
-
+const StudiesMobile = ( props ) => {  
   
-  const state = useSelector((state) =>  state.nightMode)
-  const estadoDeMenu = state.menuVisible
 
   const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
   const isLight = coloroOscuro.colorTheme
-
-  console.log( isLight )
-
-  const dispatch = useDispatch()
 
   return (
     <article className="flex flex-row items-center gap-x-4 ">
