@@ -198,7 +198,7 @@ const GridTwo = (  ) => {
             </h3>
 
               {Experience.map( (experiencia , index ) => (
-                  <ExperienceComponent key={index}  name={experiencia.name} img={experiencia.img} rol={experiencia.rol} date={experiencia.date}/>
+                  <ExperienceComponent key={index}  name={experiencia.name} img={experiencia.img} rol={ textoEsp ? experiencia.rol : experiencia.roling } date={ textoEsp ? experiencia.date : experiencia.dateing }/>
               ))}  
            
           </div>

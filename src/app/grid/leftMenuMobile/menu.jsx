@@ -50,6 +50,9 @@ const MenuLateral = ( props ) => {
     const coloroOscuro = useSelector((coloroOscuro) => coloroOscuro.colorTheme)
     const isLight = coloroOscuro.colorTheme
 
+    const idioma = useSelector((idioma)=> idioma.languaje)
+    const textoEsp = idioma.traducido 
+
 
   return (
     <motion.nav className={` ${estadoDeMenu == true ? "block" : "hidden" } ${ isLight ? "bg-transparent": "bg-[#212121]/80"} ventana absolute -left-1 bottom-0 -top-2  w-[95%] z-50 rounded-xl  overflow-hidden md:hidden max-w-[400px]`}
@@ -102,7 +105,8 @@ const MenuLateral = ( props ) => {
                 <h1 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-2xl font-bold  mb-3 `}>
                   Nicolas Falabella
                 </h1>
-                <h5 className={` ${ isLight ? "text-gray-700 ": "text-gray-300" } -my-1 text-sm`}> Frontend Developer 
+                <h5 className={` ${ isLight ? "text-gray-700 ": "text-gray-300" } -my-1 text-sm`}> 
+                { textoEsp ? "Desarrollador Frontend" : "Frontend Developer "}   
                 </h5>
                 <h5 className={` ${ isLight ? "text-gray-800 ": "text-gray-300" } mt-1 text-sm `}> nicolasgfalabella@gmail.com </h5>
               </div>
@@ -137,18 +141,21 @@ const MenuLateral = ( props ) => {
           <section className={` ${ isLight ? "border-[#aaaaaa] ": "border-[#404040]" } text-gray-200 w-[90%] mx-auto mt-4 border-b-2 border-[#404040] pb-4 `}>
             <h2 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } text-lg font-bold mb-2`}> Bio </h2>
             <p className={` ${ isLight ? "text-gray-900 ": "text-gray-400" } text-gray-400 text-xs mb-4`}>
-             He tenido el privilegio de desarrollar mi carrera profesional durante los últimos 3 años. Con una sólida experiencia consolidada sector comercial principalmente en la atención al cliente. 
+            { textoEsp ? "He tenido el privilegio de desarrollar mi carrera profesional durante los últimos 3 años. Con una sólida experiencia consolidada sector comercial principalmente en la atención al cliente. " : "I've had the privilege of developing my professional career over the past 3 years, with a solid background primarily in customer service in the commercial sector.  "} 
+             
              <br />
-              Mi trayectoria profesional ha experimentado un giro hacia el area de la programacion, especializándome en el sector Frontend
+             { textoEsp ? "  Mi trayectoria profesional ha experimentado un giro hacia el area de la programacion, especializándome en el sector Frontend. Actualmente cursando especializacion frontend en Digital House y en primer como Analista de Sistemas en Universidad de Lujan" : "My professional journey has taken a turn towards programming, specializing in the Frontend sector. Currently, I'm pursuing a Frontend specialization at Digital House and my first degree as a Systems Analyst at the University of Lujan"}
             </p>
             <div>
 
             <div className="text-xs font-semibold flex flex-row gap-x-2 mb-2">
                 <TfiMedallAlt className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } `}/>
-                <h6 className={`${ isLight ? "text-gray-950 ": "text-gray-100" }`}> 2 Años como desarollador web</h6>  
+                <h6 className={`${ isLight ? "text-gray-950 ": "text-gray-100" }`}> 
+                { textoEsp ? "2 Años como desarollador" : "2 years as a developer"} 
+                </h6>  
             </div>
 
-              <div className="text-xs font-semibold flex flex-row gap-x-2">
+              <div className="text-xs font-semibold flex flex-row gap-x-2 hidden">
                <IoIosGitMerge className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } `}/>
                 <h6 className={`${ isLight ? "text-gray-950 ": "text-gray-100" }`}> 14 Proyectos </h6>
               </div>
@@ -158,7 +165,7 @@ const MenuLateral = ( props ) => {
             <a href="/Nicolas_Falabella.pdf" download>               
                <div className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} mt-8 flex flex-row items-center justify-center   rounded-lg mx-auto gap-x-2 transition-all duration-200 w-[125px] hover:scale-110 `}>
                <IoDownloadOutline />
-               <h6 className=" py-2 text-xs font-semibold"> Download CV </h6> 
+               <h6 className=" py-2 text-xs font-semibold"> { textoEsp ? "Descargar CV" : "Download CV"} </h6> 
                </div>            
            </a>
 
@@ -167,16 +174,16 @@ const MenuLateral = ( props ) => {
           <section className="text-gray-200 w-[90%] mx-auto mt-4 ">
           <form className="flex gap-y-2 flex-col" ref={form} onSubmit={sendEmail}>
 
-          <input placeholder="Remitente" name='name' 
+          <input placeholder={`${ textoEsp ? "Remitente" : "Sender"}`} name='name' 
             className={` ${ isLight ? "bg-gray-200 text-black":"bg-[#404040] text-white"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
 
-          <input placeholder="Asunto" name="asunto"
+          <input placeholder={`${ textoEsp ? "Asunto" : "Subject"}`} name="asunto"
                 className={` ${ isLight ? "bg-gray-200 text-black":"bg-[#404040] text-white"} w-full rounded-md bg-[#404040] py-2 p-2 placeholder:text-sm text-sm `}/>
 
-          <textarea  placeholder="Ingresar mensaje" name="message"
+          <textarea placeholder={`${ textoEsp ? "Ingresar mensaje" : "Enter message"}`}  name="message"
          className={` ${ isLight ? "bg-gray-200":"bg-[#404040]"} w-full rounded-md bg-[#404040] h-[100px] p-2 placeholder:text-sm text-sm mb-2`}/>
          
-          <button className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 `}> Enviar </button>
+          <button className={` border ${ isLight  ? "border-gray-800 text-gray-800 hover:bg-lime-400/90 hover:text-gray-900" : "border-gray-400 text-gray-400 hover:bg-gray-200 hover:text-gray-900"} w-[30%] ml-auto block bg-transparent py-2 rounded-lg text-xs font-semibold border border-gray-400 text-gray-400 hover:scale-110 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 `}>  {textoEsp ? "Enviar" : "Send"} </button>
           </form>
           </section>
 
