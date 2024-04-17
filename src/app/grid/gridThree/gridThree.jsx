@@ -49,7 +49,7 @@ const GridThree = () => {
 
 
             {Estudios.map( (estudio , index ) => (
-                  <Studies key={index} sede={estudio.sede}  date={estudio.date} title={estudio.title} img={estudio.img} />
+                  <Studies key={index} sede={estudio.sede}  date={estudio.date} title={ textoEsp ? estudio.title : estudio.titleIng } img={estudio.img} />
             ))}     
 
 

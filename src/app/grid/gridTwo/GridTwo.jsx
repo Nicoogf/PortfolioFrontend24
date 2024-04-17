@@ -1,7 +1,7 @@
 import React, { useState } from 'react' ;
 
 import Technologies from '@/app/components/technologies/tecnologias.js' ;
-import TechnologiesComponent from "@/app/components/technologies/technologies"
+import TechnologiesComponent from "@/app/components/technologies/Technologies"
 import Experience from '@/app/components/experience/experiencia';
 import ExperienceComponent from '@/app/components/experience/Experience';
 import proyectos from '@/app/components/proyect/proyectos';  
@@ -103,10 +103,11 @@ const GridTwo = (  ) => {
               </div>
 
               <div>
+
                 <h2 className={` ${ isLight ? "text-gray-950 ": "text-gray-100" } font-semibold  text-2xl`}> 
                 { textoEsp ? "Portafolio" : "Personal"} 
                 </h2>
-
+                        
                 <h3 className={` ${ isLight ? "text-gray-900 ": "text-gray-200" } font-semibold  text-xl -mt-1 mb-2`}> 
                 { textoEsp ? "Personal" : "Portfolio"} 
                 </h3>
@@ -208,7 +209,7 @@ const GridTwo = (  ) => {
             <h3 className={` ${ isLight ? "text-gray-950 ": "text-gray-200" } mt-3 text-base sm:text-lg text-gray-200 font-semibold mb-4 text-center`}> Official certifications </h3>
 
               {Estudios.map((estudios , index ) => (
-                  <StudiesMobile key={index}  name={estudios.sede} img={estudios.img} title={estudios.title} />
+                  <StudiesMobile key={index}  name={estudios.sede} img={estudios.img} title={ textoEsp ? estudios.title : estudios.titleIng } />
               ))}  
            
           </div>

@@ -1,7 +1,7 @@
 import { ING , ESP } from "../types"
 
 const initialState = {
-    traducido : false
+    traducido : true
 }
 
 export default function translatorReducer( state = initialState , action ) {
