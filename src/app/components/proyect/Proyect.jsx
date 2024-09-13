@@ -17,7 +17,7 @@ const Proyect = ( props ) => {
                        alt={props.proyect} 
                        src={props.img} 
                        className="aspect-square object-cover w-16 h-16 rounded-full ml-2
-                                  sm:w-20 sm:h-20"
+                                  sm:w-20 sm:h-20 asd"
                 />
 
                 <div>
